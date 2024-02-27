@@ -117,7 +117,7 @@ AOS.init({
                         <li><a class="dropdown-item" href="tax-filling">Tax Filing</a></li>
                       </ul>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"> 
                 <a class="nav-link <?php if ($page == 'pricing') { echo 'active'; } ?>" href="pricing">
                     Pricing
                 </a>
