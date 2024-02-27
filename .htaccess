@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirect index to root
+RewriteCond %{HTTPS} on
+RewriteRule ^index$ https://filerworld.com/ [R=301,L]
+
+# Redirect http to https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)/?$ $1.php [L]
